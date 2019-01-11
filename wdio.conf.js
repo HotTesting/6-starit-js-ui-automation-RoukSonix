@@ -12,7 +12,7 @@ exports.config = {
         browserName: 'chrome'
     }],
     sync: true,
-    logLevel: 'silent',
+    logLevel: 'silent', // verbose
     coloredLogs: true,
     deprecationWarnings: true,
     baseUrl: 'http://ip-5236.sunline.net.ua:38015',
