@@ -2,3 +2,7 @@
 node_modules/
 # compiled js and debug files
 built/
+# idea
+.idea
+# vscode
+.vscode
