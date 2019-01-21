@@ -2,27 +2,27 @@ import { expect } from 'chai';
 
 describe ('SignIn module', () => {
 
-	beforeEach(() => {
+	before(() => {
 		browser.url('/');
 		browser.pause(1000);
 	});
 
 	it ('should login user', () => {
 
-		const signImButtonSelector = $('.dropdown-toggle .fa.fa-user');
-		const loginFieldSelector = $('.dropdown-menu .form-control[name="email"]');
-		const passwordFieldSelector = $('.dropdown-menu .form-control[name="password"]');
-		const submitSelector = $('.btn[type="submit"]');
-		const successSelector = $('.alert-success');
-		const login = 'i@yu.i';
-		const password = '123';
+		const signImButtonInput = $('.dropdown-toggle .fa.fa-user');
+		const loginFieldInput = $('.dropdown-menu .form-control[name="email"]');
+		const passwordFieldInput = $('.dropdown-menu .form-control[name="password"]');
+		const submitInput = $('.btn[type="submit"]');
+		const successInput = $('.alert-success');
+		const login = 'wdio@stit.ua';
+		const password = '12345';
 
-		signImButtonSelector.click();
+		signImButtonInput.click();
 		browser.pause(500);
-		loginFieldSelector.setValue(login);
-		passwordFieldSelector.setValue(password);
-		submitSelector.click();
+		loginFieldInput.setValue(login);
+		passwordFieldInput.setValue(password);
+		submitInput.click();
 		browser.pause(500);
-		expect(successSelector.isVisible()).to.be.true;
+		expect(successInput.isVisible()).to.be.true;
 	});
 });
