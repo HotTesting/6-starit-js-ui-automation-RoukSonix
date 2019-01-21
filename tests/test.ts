@@ -1,6 +1,7 @@
-describe('WDIO', function () {
-    it('Should be alive', function () {
+describe('WDIO', () => {
+
+    it('Should be alive', () => {
         browser.url('/')
         console.log('--Test passed!')
-    })
-})
+    });
+});
