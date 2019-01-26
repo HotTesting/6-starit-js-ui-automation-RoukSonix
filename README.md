@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/StartITProtractorJS/javascript-automation-webdriverio.svg?branch=master)](https://travis-ci.org/StartITProtractorJS/javascript-automation-webdriverio)
 
+[![Build Status](https://travis-ci.org/StartITProtractorJS/6-starit-js-ui-automation-RoukSonix.svg?branch=master)](https://travis-ci.org/StartITProtractorJS/6-starit-js-ui-automation-RoukSonix)
+
 # startit movie finder
 Working project for startit students
 
