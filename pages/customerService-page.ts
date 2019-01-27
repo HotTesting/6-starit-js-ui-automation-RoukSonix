@@ -13,11 +13,4 @@ export class CustomerServicePage extends BasePage {
 		browser.url('/customer-service-s-0')
 		this.sendButton().waitForVisible(5000)
 	}
-
-	/*
-	public waitForPageLoaded() {
-		this.sendButton().waitForVisible(2000)
-	}
-	*/
-
 }
