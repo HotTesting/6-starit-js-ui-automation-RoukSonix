@@ -20,5 +20,13 @@ exports.config = {
     framework: 'mocha',
     mochaOpts: {
         ui: 'bdd'
+    },
+
+    beforeTest: () => {
+        browser.timeouts("implicit", 500);
+    },
+
+    afterTest: () => {
+        browser.timeouts("implicit", 500);
     }
 }
