@@ -1,23 +1,20 @@
-import { expect } from "chai"
-import { CustomerServicePage } from '../pages/customerService-page';
-
-let customerServicePage: CustomerServicePage;
-customerServicePage = new CustomerServicePage();
+import { expect } from 'chai'
+import { CustomerServicePage } from './../pages';
+import { CustomerFormBuilder } from '../src/customerFormBuilder';
 
 describe('Customer Service form', () => {
 
+	let customerServicePage: CustomerServicePage;
+
 	before(() => {
-		customerServicePage.openPageUrl();
+		customerServicePage = new CustomerServicePage();
+		customerServicePage.openPage();
 	});
 
 	it('should send Customer Service request', () => {
 
-		customerServicePage.nameField().setValue('Andrey_01');
-		customerServicePage.emailField().setValue('i@i.ua');
-		customerServicePage.subjectField().setValue('StartIT Help');
-		customerServicePage.messageBox().setValue('StartIT another Help');
-		customerServicePage.sendButton().click();
-		expect(customerServicePage.successMessage().isVisible()).to.be.true;
-
+		customerServicePage.fillCustomerServiceForm(new CustomerFormBuilder().build());
+		customerServicePage.submitForm();
+		expect($(customerServicePage.successMessage).isVisible()).to.be.true;
 	});
 });
