@@ -8,7 +8,7 @@ export class PopularProductPage extends MainPage {
 		const selectedProductLocator = this.productName.replace('{productName}', productName);
 		browser.waitUntil(() => {
 			return $(selectedProductLocator).isVisible()
-		}, 5000, 'Ебать ты лох! Product not found. Set correct product name or select another product')
+		}, 5000, 'Product not found. Set correct product name or select another product')
 		$(selectedProductLocator).click();
 	}
 }

@@ -34,7 +34,7 @@ export class MainPage extends BasePage {
 	public checkCartIsNotEmpty() {
 		browser.waitUntil(() => {
 			return $(this.cartQuantity).getText() != '0';
-		}, 5000, 'The shopping cart is empty. Может уточки закончились, а может у тебя тест кривой. Скорее второе.');
+		}, 5000, 'The shopping cart is empty');
 	}
 
 	public selectProductTab(Tab: 'Campaign Products' | 'Popular Products' | 'Latest Products') {
@@ -47,9 +47,6 @@ export class MainPage extends BasePage {
 				break;
 			case 'Latest Products':
 				$(this.latestProductTab).click();
-				break;
-			default:
-				console.log('Wrong tab name. Ты шо не умеешь текст копировать с браузера?');
 				break;
 		}
 	}

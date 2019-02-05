@@ -1,16 +1,9 @@
 import * as faker from 'faker';
-import { ICustomerForm } from '../pages/base-page';
+import { ICustomerForm } from '../pages';
 
 export class CustomerFormBuilder {
 
-
-	/**
-	 * Не знаю нахера мне тут overriden, но пусть пока будет
-	 */
-
-	private overriden = {
-
-	}
+	private overriden = {}
 
 	private default = {
 		firstName: faker.name.firstName(),
@@ -21,10 +14,10 @@ export class CustomerFormBuilder {
 		email: faker.internet.email(),
 		subject: 'StartIT Help',
 		message: 'StartIT another Help',
-		postalCode:  faker.address.zipCode(),
+		postalCode: faker.address.zipCode(),
 		phone: faker.phone.phoneNumberFormat(),
 		password: 'ЙЦУКЕН!QWERTY',
-		countryCode: 'US',
+		countryCode: 'US'
 	}
 
 	build(): ICustomerForm {

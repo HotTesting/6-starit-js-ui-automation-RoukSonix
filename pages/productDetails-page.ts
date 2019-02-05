@@ -17,5 +17,4 @@ export class ProductDetailsPage {
 	public closeProductDetails() {
 		$(this.closeProductDetailPage).click();
 	}
-
 }
